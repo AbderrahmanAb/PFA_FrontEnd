@@ -1,0 +1,34 @@
+{
+  "benevoles": [
+    {
+      "name": "ahmed",
+      "active": true,
+      "tel": "0616254123",
+      "id": 1
+    },
+    {
+      "name": "simohammed",
+      "tel": "0616287134",
+      "active": true,
+      "id": 2
+    },
+    {
+      "name": "anass",
+      "tel": "0564871",
+      "active": true,
+      "id": 3
+    },
+    {
+      "name": "totto",
+      "tel": "0616287134",
+      "active": true,
+      "id": 4
+    },
+    {
+      "name": "alonso",
+      "tel": "0616287134",
+      "active": true,
+      "id": 5
+    }
+  ]
+}
