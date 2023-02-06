@@ -1,1 +1,46 @@
-<p>benevoles-detail works!</p>
+<div class="card mt-5">
+  <div class="card-header">Current Benevole</div>
+  <div class="card-body ">
+    <div class="row ">
+
+
+      <div class="col">
+        <div class="row">
+          <div class="col col-lg-4">id</div>
+          <div class="col">{{currentBenevole.result.id}}</div>
+
+        </div>
+        <div class="row">
+          <div class="col col-lg-4">name</div>
+          <div class="col">{{currentBenevole.result.name}}</div>
+
+        </div>
+        <div class="row">
+          <div class="col col-lg-4">telephone</div>
+          <div class="col">{{currentBenevole.result.tel}}</div>
+
+        </div>
+        <div class="row">
+          <div class="col col-lg-4">active</div>
+          <div class="col">{{currentBenevole.result.active}}</div>
+
+        </div>
+      </div>
+      <div class="col"><button class="btn btn-danger m-lg-2" (click)="deleteTutorial()">Delete</button>
+
+        <button class="btn btn-info m-lg-2" (click)="deleteTutorial()">&nbsp;&nbsp;Edit &nbsp;&nbsp;</button>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>

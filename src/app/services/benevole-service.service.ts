@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Benevole} from "../models/Benevole";
-const baseUrl = 'http://localhost:3000/benevoles';
+import {BenevoleDto, Root, Root1} from "../models/BenevoleDto";
+const baseUrl = 'https://localhost:7228/api/BeneoleApi';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,11 @@ const baseUrl = 'http://localhost:3000/benevoles';
 export class BenevoleServiceService {
 
   constructor(private http: HttpClient) { }
-  getAll(): Observable<Benevole[]> {
-    return this.http.get<Benevole[]>(baseUrl);
+  getAll(): Observable<Root> {
+    return this.http.get<Root>(baseUrl);
   }
-  get(id: any): Observable<Benevole> {
-    return this.http.get(`${baseUrl}/${id}`);
+  get(id: any): Observable<Root1> {
+    return this.http.get<Root1>(`${baseUrl}/${id}`);
   }
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);

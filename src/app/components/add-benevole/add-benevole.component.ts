@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Benevole} from "../../models/Benevole";
 import {BenevoleServiceService} from "../../services/benevole-service.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {BenevoleDto} from "../../models/BenevoleDto";
 
 @Component({
   selector: 'app-add-benevole',
@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./add-benevole.component.css']
 })
 export class AddBenevoleComponent implements OnInit {
-  benevole: Benevole = {
+  benevole: BenevoleDto = {
     name: '',
     tel: '',
     active: false
