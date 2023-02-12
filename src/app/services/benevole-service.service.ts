@@ -19,8 +19,8 @@ export class BenevoleServiceService {
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
   }
-  update(id: any, data: any): Observable<any> {
-    return this.http.put(`${baseUrl}/${id}`, data);
+  update(id: any, data: BenevoleDto): Observable<BenevoleDto> {
+    return this.http.put<BenevoleDto>(`${baseUrl}`, data);
   }
   delete(id: any): Observable<any> {
     return this.http.delete(`${baseUrl}/${id}`);

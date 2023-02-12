@@ -5,28 +5,31 @@
                             placeholder="Type something to search list items"></div>
 
 </div>
-<div >
+<div class="card mt-2" >
+  <div class="card-header">Liste Benevole</div>
+  <div class="card-body ">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>telephone</th>
+        <th>active</th>
+      </tr>
+      </thead>
+      <tbody>
 
-  <table class="table">
-    <thead>
-    <tr>
-      <th>Id</th>
-      <th>name</th>
-      <th>telephone</th>
-      <th>active</th>
-    </tr>
-    </thead>
-    <tbody>
 
+      <tr  *ngFor="let o of benevoles " routerLink="/benevoles/{{o.id}}">
+        <td><a  style="color: black;text-decoration: none;" >{{o.id}}</a></td>
+        <td>{{o.name}}</td>
+        <td>{{o.tel}}</td>
+        <td>{{o.active}}</td>
+        <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
+      </tr>
+      </tbody>
 
-    <tr  *ngFor="let o of benevoles ">
-      <td><a  style="color: black;text-decoration: none;" routerLink="/benevoles/{{o.id}}">{{o.id}}</a></td>
-      <td>{{o.name}}</td>
-      <td>{{o.tel}}</td>
-      <td>{{o.active}}</td>
-      <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
-    </tr>
-    </tbody>
+    </table>
 
-  </table>
+  </div>
 </div>

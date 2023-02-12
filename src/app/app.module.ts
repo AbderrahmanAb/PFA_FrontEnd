@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BenevolesComponent } from './components/benevoles/benevoles.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BenevolesDetailComponent } from './components/benevoles-detail/benevoles-detail.component';
 import { AddBenevoleComponent } from './components/add-benevole/add-benevole.component';
 import {HttpClientModule} from "@angular/common/http";
+import { UpdatesComponent } from './components/updates/updates.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,16 @@ import {HttpClientModule} from "@angular/common/http";
     NavbarComponent,
     BenevolesComponent,
     BenevolesDetailComponent,
-    AddBenevoleComponent
+    AddBenevoleComponent,
+    UpdatesComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
