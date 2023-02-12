@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Update Benevole</h1>
+
+  <a href="#" routerLink="/benevoles" class="btn btn-primary">Back</a>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        formControlName="name"
+        id="name"
+        type="text"
+        [(ngModel)]="currentBenevole.name"
+        class="form-control">
+      <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+        <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tel">Telephone</label>
+      <textarea
+        formControlName="tel"
+        id="tel"
+        type="text"
+        [(ngModel)]="currentBenevole.tel"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f['tel'].touched && f['tel'].invalid" class="alert alert-danger">
+        <div *ngIf="f['tel'].errors && f['tel'].errors['required']">Telephone is required.</div>
+      </div>
+    </div>
+    <div class="form-group mt-2">
+
+
+      <select sclass="form-control"  [(ngModel)]="selectedValue">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+
+
+      </div>
+
+
+    <button class="btn btn-primary mt-2" type="submit" [disabled]="!form.valid">Update</button>
+  </form>
+</div>
